@@ -4,7 +4,7 @@ addpath('../Functions/General')
 
 dataset = 'n';
 
-data_dir = '../../../MEGA/Human limb mat files';
+data_dir = '../Input Data/Human Limbs from RGBD Data';
 
 load_filename = sprintf('hernandez_raw_%s.mat', dataset);
 save_filename = sprintf('hernandez_clean_%s.mat', dataset);
