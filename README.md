@@ -1,2 +1,3 @@
 # human_part_segmentation
-Human part segmentation with known part coordinates
+
+MATLAB code for [Human Part Segmentation in Depth Images with Annotated Part Positions](http://www.mdpi.com/1424-8220/18/6/1900/htm).
