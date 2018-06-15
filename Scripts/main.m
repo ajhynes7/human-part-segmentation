@@ -8,15 +8,16 @@ clc, clearvars, close all;
 % June 11, 2018
 %-------------------------------------------------------------------------
 
-path_to_data = '../Input Data/Human Limbs from RGBD Data';
+path_to_data = fullfile('..', 'Input Data', 'Human Limbs from RGBD Data');
 
-addpath('../Functions/Graphs')
-addpath('../Functions/Results')
-addpath('../Functions/General')
-addpath('../Functions/Clustering')
-addpath('../Functions/Segmentation')
-addpath('../Functions/MATLAB File Exchange')
-addpath('../Functions/GraphAnalysisToolbox (by Leo Grady)')
+% Add paths to functions
+addpath(fullfile('..', 'Functions', 'Graphs'))
+addpath(fullfile('..', 'Functions', 'Results'))
+addpath(fullfile('..', 'Functions', 'General'))
+addpath(fullfile('..', 'Functions', 'Clustering'))
+addpath(fullfile('..', 'Functions', 'Segmentation'))
+addpath(fullfile('..', 'Functions', 'MATLAB File Exchange'))
+addpath(fullfile('..', 'Functions', 'GraphAnalysisToolbox (by Leo Grady)'))
 
 
 %% Parameters
@@ -117,7 +118,8 @@ if pure_RW == false
     imagesc(RGB);
     title(sprintf('Arm segmentation: Set %s - Frame %d', dataset, f))
     
-    fprintf('Valid arms: \n%d %d \n\n', is_valid(1), is_valid(2)); 
+    fprintf('Valid arms (right/left): \n%d %d \n\n',...
+        is_valid(1), is_valid(2)); 
 end
 
 figure;
